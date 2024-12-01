@@ -1,0 +1,54 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: contapass_app
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - APP_ENV=docker
+      - DB_HOST=mysql
+    networks:
+      - app_network
+    depends_on:
+      - mysql
+
+  contapassweb:
+    build:
+      context: .
+      dockerfile: modules/contapass/Dockerfile
+    container_name: contapassweb_service
+    volumes:
+      - ./modules/contapass:/var/www
+    ports:
+      - "8001:9000"
+    environment:
+      - APP_ENV=docker
+      - DB_HOST=mysql
+    networks:
+      - app_network
+    depends_on:
+      - mysql
+
+  mysql:
+    image: mysql:5.7
+    container_name: contapass_db
+    environment:
+      MYSQL_ROOT_PASSWORD: Etiuk4460
+      MYSQL_DATABASE: contapass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge
+
+volumes:
+  db_data:

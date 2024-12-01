@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none;
+}
+
+.container {
+    margin-top: 4rem; /* Ajusta este valor según sea necesario */
+}

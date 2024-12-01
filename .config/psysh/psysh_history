@@ -1,0 +1,24 @@
+exit
+<?php
+$admin = new App\Models\Admin;
+$admin->name = 'Admin Maestro';
+$admin->email = 'admin@dominio.com';
+$admin->password = bcrypt('password'); // Cambia 'password' por la contraseña que desees
+$admin->save();
+[200~$admin = new App\Models\Admin;
+$admin->name = 'Admin Maestro';
+$admin->email = 'admin@dominio.com';
+$admin->password = bcrypt('password'); // Cambia 'password' por la contraseña que desees
+exit
+$admin = new App\Models\Admin;
+$admin->name = 'Admin Maestro';
+$admin->email = 'admin@dominio.com';
+$admin->password = bcrypt('Etiuk4460');
+$admin->save();
+exit
+$admin = new App\Models\Admin;
+$admin->name = 'Admin Maestro';
+$admin->email = 'admin@dominio.com';
+$admin->password = bcrypt('Etiuk4460'); 
+$admin->save();
+exit
