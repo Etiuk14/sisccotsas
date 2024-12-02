@@ -21,3 +21,24 @@ yarn-error.log
 /.nova
 /.vscode
 /.zed
+
+
+# Ignorar el directorio node_modules
+node_modules/
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos de compilación
+/dist
+/build
+
+# Ignorar archivos de configuración del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Ignorar archivos de log
+*.log
+
+# Ignorar archivos de dependencias de Composer
+vendor/
